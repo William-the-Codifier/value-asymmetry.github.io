@@ -83,6 +83,7 @@
             max-width: 1000px;
             margin: 100px auto;
             padding: 0 5%;
+            scroll-margin-top: 100px; /* Prevents desktop menu from covering the title */
         }
 
         .section h2 {
@@ -184,6 +185,9 @@
             .nav-links a {
                 margin: 0;
             }
+            .section {
+                scroll-margin-top: 180px; /* Larger offset for the taller mobile menu */
+            }
             .section h2 {
                 font-size: 2rem;
             }
@@ -233,7 +237,7 @@
         <h2>Let's Connect</h2>
         <p>I am actively building out new ESG data architecture models and reporting tools. You can follow my progress, explore my code, or reach out on GitHub.</p>
         
-        <a href="https://github.com/value-asymmetry" target="_blank" class="contact-btn">Connect on GitHub</a>
+        <a href="https://github.com/value-asymmetry" target="_blank" rel="noopener noreferrer" class="contact-btn">Connect on GitHub</a>
     </section>
 
     <!-- FOOTER -->
