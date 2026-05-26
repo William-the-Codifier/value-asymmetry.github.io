@@ -6,6 +6,7 @@
     <meta name="description" content="Value Asymmetry provides ESG strategy, intelligent automation systems, and real-time reporting dashboards for environmental data.">
     <title>Value Asymmetry | ESG Strategy & Data Automation</title>
 
+    <!-- Premium Typography: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -23,12 +24,15 @@
             --transition: all 0.3s ease;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
             background: var(--background);
             color: var(--text-main);
-            scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
@@ -98,6 +102,7 @@
             font-size: 1.15rem;
             color: var(--text-muted);
             font-weight: 300;
+            margin-bottom: 20px;
         }
 
         /* --- MODERN BULLET POINTS --- */
@@ -125,14 +130,6 @@
         }
 
         /* --- BUTTONS --- */
-        .btn-container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
         .contact-btn {
             display: inline-block;
             background-color: var(--primary);
@@ -142,37 +139,15 @@
             border-radius: 8px;
             font-weight: 600;
             font-size: 1.1rem;
+            margin-top: 25px;
             transition: var(--transition);
             box-shadow: 0 4px 12px rgba(10, 26, 63, 0.2);
-            border: 2px solid var(--primary);
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
         }
 
         .contact-btn:hover {
             background-color: var(--secondary);
-            border-color: var(--secondary);
             transform: translateY(-2px);
             box-shadow: 0 6px 16px rgba(10, 26, 63, 0.3);
-        }
-
-        .secondary-btn {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--primary);
-            text-decoration: none;
-            padding: 16px 36px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            border: 2px solid var(--primary);
-            font-family: 'Inter', sans-serif;
-        }
-
-        .secondary-btn:hover {
-            background-color: rgba(10, 26, 63, 0.05);
-            transform: translateY(-2px);
         }
 
         /* --- SCROLL ANIMATION CLASSES --- */
@@ -226,6 +201,7 @@
 
 <body>
 
+    <!-- NAVIGATION BAR -->
     <header class="site-header">
         <a href="#" class="site-logo">Value Asymmetry</a>
         <nav class="nav-links">
@@ -235,20 +211,31 @@
         </nav>
     </header>
 
+    <!-- HERO BANNER -->
     <img src="banner.png" alt="Value Asymmetry Banner - ESG Strategy & Data Automation" class="hero-banner">
 
+    <!-- ABOUT SECTION -->
     <section id="about" class="section fade-in-section">
-        <h2>Intelligent Data. Measurable Impact.</h2>
+        <h2>Engineering Precision. Intelligent Data.</h2>
         <p>
-            Founded by an Environmental Engineer specializing in pollution transport and control processes, 
-            and backed by a Google AI Professional Certification, Value Asymmetry bridges the gap between 
-            complex environmental science and enterprise data architecture. We build intelligent automation systems 
-            that simplify ESG reporting, streamline compliance workflows, and transform complex environmental metrics 
-            into actionable insights. Our mission is to eliminate bottlenecks and empower organizations to operate 
-            with complete clarity and operational transparency.
+            Value Asymmetry bridges the gap between physical environmental science and modern data architecture. 
+            Founded on a rigorous background in <strong>Environmental Engineering</strong>—with specialized expertise in pollution transport and control processes—we don't just move data; we understand the science and compliance requirements behind it.
         </p>
+        <p>
+            We build intelligent automation systems that simplify ESG reporting,
+            streamline regulatory workflows, and transform complex environmental metrics into actionable insights.
+            Our mission is to eliminate bottlenecks and empower organizations to operate with complete transparency.
+        </p>
+        
+        <!-- R&D CALLOUT BOX -->
+        <div style="margin-top: 30px; padding: 20px; background: #ffffff; border-left: 4px solid var(--secondary); border-radius: 0 8px 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <p style="margin: 0; font-size: 1.05rem; color: var(--text-main); font-weight: 400;">
+                <strong style="color: var(--primary);">Current R&D Focus:</strong> Actively integrating the <strong>full Microsoft Copilot AI suite</strong> and advanced <strong>Power BI architecture</strong> into next-generation ESG data models to deliver predictive environmental analytics.
+            </p>
+        </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section id="services" class="section fade-in-section">
         <h2>Core Capabilities</h2>
         <ul class="services-list">
@@ -259,25 +246,21 @@
         </ul>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section fade-in-section" style="text-align: center;">
         <h2>Let's Connect</h2>
-        <p>I am actively building out new ESG data architecture models and reporting tools. You can view my architecture on GitHub, or email me directly to discuss strategy.</p>
+        <p>I am actively building out new ESG data architecture models and reporting tools. You can follow my progress, explore my code, or reach out on GitHub.</p>
         
-        <div class="btn-container">
-            <!-- New Copy to Clipboard Button -->
-            <button onclick="copyEmail()" class="contact-btn" id="emailBtn">Copy Email Address</button>
-            
-            <!-- GitHub Organization Button -->
-            <a href="https://github.com/Value-Asymmetry" target="_blank" rel="noopener noreferrer" class="secondary-btn">View Our Architecture</a>
-        </div>
+        <a href="https://github.com/value-asymmetry" target="_blank" rel="noopener noreferrer" class="contact-btn">Connect on GitHub</a>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         © 2026 Value Asymmetry — Engineered for clarity.
     </footer>
 
+    <!-- SCROLL ANIMATION SCRIPT -->
     <script>
-        // Smooth scroll animations
         document.addEventListener("DOMContentLoaded", function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -290,21 +273,6 @@
             const hiddenElements = document.querySelectorAll('.fade-in-section');
             hiddenElements.forEach((el) => observer.observe(el));
         });
-
-        // Copy email to clipboard function
-        function copyEmail() {
-            navigator.clipboard.writeText("valueasymmetry@gmail.com").then(() => {
-                const btn = document.getElementById('emailBtn');
-                btn.innerText = "Email Copied!";
-                
-                // Change the text back after 3 seconds
-                setTimeout(() => {
-                    btn.innerText = "Copy Email Address";
-                }, 3000);
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
-        }
     </script>
 
 </body>
