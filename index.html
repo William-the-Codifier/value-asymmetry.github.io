@@ -13,11 +13,12 @@
             color: #1a1a1a;
         }
 
-        /* Banner Section - Sleek CSS Gradient */
-        .hero {
-            background: linear-gradient(135deg, #0a1a3f 0%, #294b8a 100%);
-            height: 400px; 
+        /* Banner Image - Scales perfectly without cropping your text */
+        .hero-banner {
             width: 100%;
+            height: auto;
+            display: block;
+            background: #0a1a3f; /* Fills the background in case your image is transparent */
         }
 
         /* Standard Section Styling */
@@ -62,8 +63,8 @@
 
 <body>
 
-    <!-- HERO BANNER -->
-    <div class="hero"></div>
+    <!-- HERO BANNER - Uses your exact image file and scales it safely -->
+    <img src="banner.png" alt="Value Asymmetry Banner" class="hero-banner">
 
     <!-- ABOUT SECTION -->
     <div class="section">
