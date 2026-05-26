@@ -13,14 +13,14 @@
             color: #1a1a1a;
         }
 
-        /* Banner Section (no text, no overlay, show top of image) */
+        /* Banner Section - Sleek CSS Gradient */
         .hero {
-            background: url('banner.png') top center/cover no-repeat;
-            height: 550px; /* adjust if needed */
+            background: linear-gradient(135deg, #0a1a3f 0%, #294b8a 100%);
+            height: 400px; 
             width: 100%;
         }
 
-        /* Section */
+        /* Standard Section Styling */
         .section {
             max-width: 900px;
             margin: 60px auto;
@@ -38,6 +38,17 @@
             font-size: 1.1rem;
         }
 
+        /* Clean Bullet Points for Services */
+        .section ul {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            padding-left: 20px;
+        }
+        
+        .section li {
+            margin-bottom: 10px;
+        }
+
         /* Footer */
         footer {
             background: #0a1a3f;
@@ -51,7 +62,7 @@
 
 <body>
 
-    <!-- HERO (banner only) -->
+    <!-- HERO BANNER -->
     <div class="hero"></div>
 
     <!-- ABOUT SECTION -->
@@ -68,12 +79,12 @@
     <!-- SERVICES SECTION -->
     <div class="section">
         <h2>Our Focus Areas</h2>
-        <p>
-            • Automated environmental data collection<br>
-            • ESG compliance workflows<br>
-            • Real‑time reporting dashboards<br>
-            • AI‑driven sustainability insights
-        </p>
+        <ul>
+            <li>Automated environmental data collection</li>
+            <li>ESG compliance workflows</li>
+            <li>Real-time reporting dashboards</li>
+            <li>AI-driven sustainability insights</li>
+        </ul>
     </div>
 
     <!-- FOOTER -->
