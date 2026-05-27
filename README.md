@@ -1,7 +1,7 @@
 Value Asymmetry — Official Website Repository
 Welcome to the official website repository for Value Asymmetry, a company focused on ESG automation, environmental engineering insights, and data‑driven operational systems. This repository powers the public website located at:
 
-https://value-asymmetry.github.io (value-asymmetry.github.io in Bing)
+https://value-asymmetry.github.io
 
 What this repository contains:
 Company mission and overview
@@ -18,3 +18,11 @@ This repository is part of the broader Value Asymmetry GitHub Organization, whic
 
 Status:
 This site is currently in active development as part of the Value Asymmetry build‑out.
+
+---
+### Portfolio: Active ESG Projects
+* **ColdChain Logistics ESG Engine**
+    * **Objective**: Automate carbon accounting for temperature-controlled supply chains.
+    * **Capability**: Transforms raw fleet fuel/cargo logs into audit-ready Carbon Intensity metrics (g CO2e/ton-mile).
+    * **Link**: [ColdChain Logistics ESG Pipeline](https://github.com/Value-Asymmetry/coldchain-logistics-esg-pipeline)
+      
