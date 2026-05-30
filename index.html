@@ -6,6 +6,10 @@
     <meta name="description" content="Asymmetric Insight provides environmental strategy, intelligent automation systems, and real-time reporting dashboards for environmental data.">
     <title>Asymmetric Insight | Environmental Strategy & Data Automation</title>
 
+    <script>
+        document.documentElement.classList.add("js-enabled");
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -17,47 +21,302 @@
             --background: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #475569;
+            --hero-bg: #020817;
+            --header-height: 72px;
             --transition: all 0.3s ease;
         }
 
-        html { scroll-behavior: smooth; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--background); color: var(--text-main); overflow-x: hidden; }
-
-        .site-header { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); padding: 18px 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-        .site-logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; letter-spacing: -0.5px; }
-        .nav-links a { margin-left: 30px; text-decoration: none; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
-        .nav-links a:hover { color: var(--secondary); }
-
-        .hero-banner { width: 100%; height: auto; display: block; background: var(--primary); }
-        
-        .section { 
-            max-width: 1000px; 
-            margin: 100px auto; 
-            padding: 0 5%; 
-            scroll-margin-top: 100px; 
+        * {
+            box-sizing: border-box;
         }
 
-        .section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: var(--primary); }
-        .section p { line-height: 1.8; font-size: 1.15rem; color: var(--text-muted); margin-bottom: 20px; }
+        html {
+            scroll-behavior: smooth;
+        }
 
-        .services-list { list-style: none; padding: 0; margin-top: 30px; }
-        .services-list li { font-size: 1.15rem; color: var(--text-main); margin-bottom: 15px; padding-left: 30px; position: relative; }
-        .services-list li::before { content: "→"; position: absolute; left: 0; color: var(--secondary); font-weight: bold; }
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
 
-        .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
-        .contact-btn { display: inline-block; background-color: var(--primary); color: white; text-decoration: none; padding: 16px 36px; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: var(--transition); cursor: pointer; border: none; }
-        .contact-btn:hover { background-color: var(--secondary); transform: translateY(-2px); }
-        .email-btn { background-color: var(--secondary); }
-        
-        .fade-in-section { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in-section.is-visible { opacity: 1; transform: none; }
+        .site-header {
+            min-height: var(--header-height);
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 16px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
 
-        footer { background: var(--primary); color: rgba(255, 255, 255, 0.8); text-align: center; padding: 40px 20px; margin-top: 100px; font-size: 0.95rem; }
+        .site-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+        }
 
-        @media (max-width: 768px) { 
-            .site-header { flex-direction: column; } 
-            .nav-links { margin-top: 20px; gap: 15px; } 
-            .section { scroll-margin-top: 140px; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .hero {
+            height: calc(100vh - var(--header-height));
+            height: calc(100svh - var(--header-height));
+            background: var(--hero-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-banner {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+            background: var(--hero-bg);
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 100px auto;
+            padding: 0 5%;
+            scroll-margin-top: 100px;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .section p {
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .highlight-card {
+            margin-top: 30px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .highlight-card p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .services-list li {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .services-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .btn-container.align-left {
+            justify-content: flex-start;
+            margin-top: 15px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .contact-btn.small {
+            padding: 12px 24px;
+            font-size: 1rem;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .email-btn {
+            background-color: var(--secondary);
+        }
+
+        .fade-in-section {
+            opacity: 1;
+            transform: none;
+        }
+
+        .js-enabled .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        footer {
+            background: var(--primary);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 100px;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .site-header {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 12px 4%;
+            }
+
+            .site-logo {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 12px;
+                row-gap: 8px;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                height: auto;
+                min-height: 0;
+                padding: 18px 0 26px;
+                background: var(--hero-bg);
+            }
+
+            .hero-banner {
+                width: 100%;
+                max-width: 100%;
+                max-height: none;
+                height: auto;
+            }
+
+            .section {
+                margin: 70px auto;
+                scroll-margin-top: 150px;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section p,
+            .services-list li {
+                font-size: 1.05rem;
+            }
+
+            .btn-container,
+            .btn-container.align-left {
+                justify-content: center;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 320px;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .js-enabled .fade-in-section,
+            .fade-in-section {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .contact-btn,
+            .nav-links a {
+                transition: none;
+            }
+
+            .contact-btn:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
@@ -65,7 +324,7 @@
 
     <header class="site-header">
         <a href="#" class="site-logo">Asymmetric Insight</a>
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Primary navigation">
             <a href="#about">About</a>
             <a href="#services">Capabilities</a>
             <a href="#work">Featured Work</a>
@@ -73,67 +332,92 @@
         </nav>
     </header>
 
-    <img src="banner.png" alt="Asymmetric Insight" class="hero-banner">
+    <main>
+        <section class="hero" aria-label="Asymmetric Insight environmental data automation">
+            <img src="banner.png" width="1535" height="1024" alt="Asymmetric Insight environmental data automation banner" class="hero-banner" fetchpriority="high" decoding="async">
+        </section>
 
-    <section id="about" class="section fade-in-section">
-        <h2>Engineering Precision. Intelligent Data.</h2>
-        <p>Asymmetric Insight bridges the gap between physical environmental science and modern data architecture. Founded on a rigorous background in <strong>Environmental Engineering</strong>—with specialized expertise in pollution transport and control processes—we don't just move data; we understand the science and compliance requirements behind it.</p>
-        <p>We build intelligent automation systems that simplify Environmental reporting, streamline regulatory workflows, and transform complex environmental metrics into actionable insights.</p>
-        
-        <div style="margin-top: 30px; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-            <p style="margin: 0; font-size: 1.05rem;"><strong>Current R&D Focus:</strong> Actively integrating the <strong>full Microsoft Copilot AI suite</strong> and advanced <strong>Power BI architecture</strong> into next-generation ESG data models.</p>
-        </div>
-    </section>
+        <section id="about" class="section fade-in-section">
+            <h2>Environmental Data, Engineered for Intelligence.</h2>
+            <p>Asymmetric Insight bridges the gap between physical environmental science and modern data architecture. Founded on a rigorous background in <strong>Environmental Engineering</strong>—with specialized expertise in pollution transport and control processes—we don't just move data; we understand the science and compliance requirements behind it.</p>
+            <p>We build intelligent automation systems that simplify environmental reporting, streamline regulatory workflows, and transform complex environmental metrics into actionable insights.</p>
 
-    <section id="services" class="section fade-in-section">
-        <h2>Core Capabilities</h2>
-        <ul class="services-list">
-            <li>Automated environmental data collection and pipelining</li>
-            <li>ESG compliance and regulatory workflows</li>
-            <li>Real-time BI reporting and dashboard architecture</li>
-            <li>AI-driven sustainability analytics and strategy</li>
-        </ul>
-    </section>
+            <div class="highlight-card">
+                <p><strong>Current Development Focus:</strong> Integrating <strong>Microsoft Copilot, Power BI, Fabric, and automation workflows</strong> into next-generation environmental and ESG data models.</p>
+            </div>
+        </section>
 
-    <section id="work" class="section fade-in-section">
-        <h2>Featured Project: ColdChain ESG Engine</h2>
-        <p>A technical demonstration of our ESG data automation pipeline. This project integrates SQL-based ETL with Power BI to track real-time Carbon Intensity (g CO2e/ton-mile), moving beyond simple averages to provide an audit-ready, weighted fleet efficiency metric.</p>
-        
-        <img src="dashboard-final.png" alt="ESG Analytics Dashboard" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 20px;">
-        
-        <div class="btn-container" style="justify-content: flex-start; margin-top: 15px;">
-            <a href="https://github.com/Value-Asymmetry/coldchain-logistics-esg-pipeline" target="_blank" rel="noopener noreferrer" class="contact-btn" style="padding: 12px 24px; font-size: 1rem;">View Technical Documentation</a>
-        </div>
-    </section>
+        <section id="services" class="section fade-in-section">
+            <h2>Core Capabilities</h2>
+            <ul class="services-list">
+                <li>Automated environmental data collection and pipelining</li>
+                <li>ESG compliance and regulatory workflows</li>
+                <li>Real-time BI reporting and dashboard architecture</li>
+                <li>AI-driven sustainability analytics and strategy</li>
+            </ul>
+        </section>
 
-    <section id="contact" class="section fade-in-section" style="text-align: center;">
-        <h2>Let's Connect</h2>
-        <p>I am actively building out new environmental data architecture models. Reach out to discuss strategy or explore my code.</p>
-        <div class="btn-container">
-            <button id="secure-email-btn" class="contact-btn email-btn">Email Me</button>
-            <a href="https://github.com/asymmetric-insight" target="_blank" rel="noopener noreferrer" class="contact-btn">Explore GitHub</a>
-        </div>
-    </section>
+        <section id="work" class="section fade-in-section">
+            <h2>Featured Project: ColdChain ESG Engine</h2>
+            <p>A technical demonstration of our ESG data automation pipeline. This project integrates SQL-based ETL with Power BI to track real-time Carbon Intensity (g CO2e/ton-mile), moving beyond simple averages to provide an audit-ready, weighted fleet efficiency metric.</p>
+
+            <img src="dashboard-final.png" alt="ColdChain ESG analytics dashboard showing carbon intensity and fleet efficiency metrics" class="project-image" loading="lazy" decoding="async">
+
+            <div class="btn-container align-left">
+                <a href="https://github.com/Value-Asymmetry/coldchain-logistics-esg-pipeline" target="_blank" rel="noopener noreferrer" class="contact-btn small">View Technical Documentation</a>
+            </div>
+        </section>
+
+        <section id="contact" class="section fade-in-section" style="text-align: center;">
+            <h2>Let's Connect</h2>
+            <p>We are actively building new environmental data architecture models. Reach out to discuss strategy or explore our code.</p>
+            <div class="btn-container">
+                <button id="secure-email-btn" class="contact-btn email-btn" type="button">Email Me</button>
+                <a href="https://github.com/asymmetric-insight" target="_blank" rel="noopener noreferrer" class="contact-btn">Explore GitHub</a>
+            </div>
+        </section>
+    </main>
 
     <footer>© 2026 Asymmetric Insight — Engineered for clarity.</footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); });
-            }, { threshold: 0.1 });
-            document.querySelectorAll('.fade-in-section').forEach((el) => observer.observe(el));
+            const fadeSections = document.querySelectorAll(".fade-in-section");
 
-            const emailBtn = document.getElementById('secure-email-btn');
-            emailBtn.addEventListener('click', function(e) {
-                const fullEmail = 'william@asymmetricinsight.com';
-                navigator.clipboard.writeText(fullEmail).then(() => {
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                fadeSections.forEach((el) => observer.observe(el));
+            } else {
+                fadeSections.forEach((el) => el.classList.add("is-visible"));
+            }
+
+            const emailBtn = document.getElementById("secure-email-btn");
+
+            if (emailBtn) {
+                emailBtn.addEventListener("click", async function() {
+                    const fullEmail = "william@asymmetricinsight.com";
                     const originalText = emailBtn.innerText;
-                    emailBtn.innerText = 'Email Copied!';
-                    setTimeout(() => { emailBtn.innerText = originalText; }, 3000);
-                    window.location.href = 'mailto:' + fullEmail;
+
+                    try {
+                        await navigator.clipboard.writeText(fullEmail);
+                        emailBtn.innerText = "Email Copied!";
+                        setTimeout(() => {
+                            emailBtn.innerText = originalText;
+                        }, 3000);
+                    } catch (err) {
+                        console.warn("Clipboard copy failed:", err);
+                    }
+
+                    window.location.href = "mailto:" + fullEmail;
                 });
-            });
+            }
         });
     </script>
 </body>
