@@ -1,6 +1,6 @@
 # Asymmetric Insight — Official Website Repository
 
-Asymmetric Insight is a consultancy founded by an **Environmental Engineer** (B.E.E., University of Delaware, concentration in **Pollution Transport and Control Processes**). We focus on the intersection of sustainability and modern data science, automating complex environmental compliance workflows specifically tailored for Small-to-Medium Enterprises (SMEs). We transform raw operational data into actionable, audit-ready insights across Scope 1, 2, and 3 emissions. This repository powers our public website at [https://value-asymmetry.github.io](https://asymmetric-insight.github.io).
+Asymmetric Insight is a consultancy founded by an **Environmental Engineer** (B.E.E., University of Delaware, concentration in **Pollution Transport and Control Processes**). We focus on the intersection of sustainability and modern data science, automating complex environmental compliance workflows specifically tailored for Small-to-Medium Enterprises (SMEs). We transform raw operational data into actionable, audit-ready insights across Scope 1, 2, and 3 emissions. This repository powers our public website at [https://asymmetric-insight.github.io](https://asymmetric-insight.github.io).
 
 ## Research & Development: The Technical Stack
 We bridge core environmental engineering principles with intelligent systems to streamline sustainability reporting. Our R&D approach is iterative—we are actively building and testing advanced data architectures to help SMEs achieve comprehensive emissions visibility:
